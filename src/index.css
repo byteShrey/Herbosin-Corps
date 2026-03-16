@@ -1,13 +1,13 @@
 /* Green gradient + white theme - CSS variables (darker green) */
 :root {
-  --green-primary: #1b4332;
-  --green-light: #2d6a4f;
-  --green-pale: #74c69d;
-  --green-bg: #b7e4c7;
-  --green-bg-subtle: #d8f3dc;
-  --white: #ffffff;
-  --text-dark: #1b4332;
-  --text-muted: #2d6a4f;
+  --green-primary: #0b5b35;    /* darker, richer main green */
+  --green-light:   #16a34a;    /* brighter accent/hover green */
+  --green-pale:    #6ee7b7;    /* light mint for highlights */
+  --green-bg:      #bbf7d0;    /* section/background green */
+  --green-bg-subtle:#dcfce7;   /* very light overall page tint */
+  --white:         #ffffff;
+  --text-dark:     #052e16;    /* very dark green text */
+  --text-muted:    #166534; 
 }
 
 * {
