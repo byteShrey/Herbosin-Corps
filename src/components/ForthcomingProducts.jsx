@@ -44,7 +44,7 @@ export default function ForthcomingProducts() {
             <div className="forthcoming-product-text">
               <h3 className="forthcoming-product-title">Organic Fertilizers</h3>
               <p>
-                Herbosin Corp is expanding its product portfolio with the introduction of organic fertilizers, developed
+                Herbosin Corps is expanding its product portfolio with the introduction of organic fertilizers, developed
                 to support sustainable and eco-friendly agriculture. Our organic fertilizers are formulated using natural
                 plant-based and organic materials that enrich soil health, improve nutrient availability, and promote
                 balanced plant growth.

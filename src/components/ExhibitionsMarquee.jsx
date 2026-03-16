@@ -23,7 +23,7 @@ export default function ExhibitionsMarquee() {
   return (
     <section className="exhibitions">
       <div className="container">
-        <h2 className="exhibitions-title">Exhibitions</h2>
+        <h2 className="exhibitions-title">Exhibition Calender</h2>
       </div>
       <div className="marquee-wrap">
         <div className="marquee-track">

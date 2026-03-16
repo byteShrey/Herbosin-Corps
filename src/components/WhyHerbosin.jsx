@@ -39,11 +39,11 @@ export default function WhyHerbosin() {
         <div className="why-block">
           <h3 className="why-subtitle">BACKWARD INTEGRATION</h3>
           <p>
-            Herbosin Corps operates with a backward integrated supply chain that connects cultivation, sourcing, and manufacturing. By building strong relationships with farmers and botanical suppliers, we ensure the availability of high-quality raw materials while maintaining transparency and sustainability throughout the supply process.
+            Herbosin Corps operates with a backward integrated supply chain that connects cultivation, sourcing, and manufacturing. By building strong relationships with farmers and botanical suppliers, we ensure the availability of high quality raw materials while maintaining transparency and sustainability throughout the supply process.
 
             This approach enables us to deliver reliable herbal extracts, phytochemicals, essential oils, and natural food ingredients to industries worldwide.
 
-            Through close collaboration with our cultivation partners, we are able to monitor the entire process—from the careful selection of plant species to harvesting, processing, and final production. This level of integration allows us to maintain strict quality standards while ensuring consistency in every batch we supply.
+            Through close collaboration with our cultivation partners, we are able to monitor the entire process from the careful selection of plant species to harvesting, processing, and final production. This level of integration allows us to maintain strict quality standards while ensuring consistency in every batch we supply.
 
             Our backward integration model also supports responsible and sustainable agricultural practices. By working directly with growers, we promote ethical sourcing, environmental sustainability, and long-term partnerships that benefit both the farming communities and the industries we serve.
 
