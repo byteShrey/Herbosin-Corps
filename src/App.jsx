@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import Products from './pages/Products'
+import About from './pages/About'
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<PlaceholderPage title="About Us" />} />
+          <Route path="/about" element={<About />} />
           <Route path="/products" element={<Products />} />
           <Route path="/network" element={<PlaceholderPage title="Network" />} />
           <Route path="/enquiry" element={<PlaceholderPage title="Enquiry" />} />
