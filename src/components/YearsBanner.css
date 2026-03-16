@@ -1,0 +1,25 @@
+.years-banner {
+  padding: 2rem 0;
+  background: transparent;
+}
+
+.years-banner .container {
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.years-banner-inner {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  width: 100%;
+}
+
+.years-banner-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}

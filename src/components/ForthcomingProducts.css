@@ -1,0 +1,34 @@
+.forthcoming {
+  padding: 3rem 0;
+  background: transparent;
+}
+
+.forthcoming-title {
+  color: var(--green-primary);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.forthcoming-videos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.forthcoming-video-wrap {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 4px 16px rgba(45, 106, 79, 0.2);
+}
+
+.forthcoming-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: middle;
+}

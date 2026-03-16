@@ -1,0 +1,54 @@
+/* Green gradient + white theme - CSS variables (darker green) */
+:root {
+  --green-primary: #1b4332;
+  --green-light: #2d6a4f;
+  --green-pale: #74c69d;
+  --green-bg: #b7e4c7;
+  --green-bg-subtle: #d8f3dc;
+  --white: #ffffff;
+  --text-dark: #1b4332;
+  --text-muted: #2d6a4f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text-dark);
+  background: linear-gradient(180deg, var(--white) 0%, var(--green-bg-subtle) 50%, var(--white) 100%);
+  background-attachment: fixed;
+  line-height: 1.6;
+}
+
+/* Single continuous page background - subtle gradient */
+.gradient-bg,
+.gradient-bg-reverse {
+  background: linear-gradient(180deg, var(--white) 0%, var(--green-bg-subtle) 35%, var(--green-bg-subtle) 65%, var(--white) 100%);
+}
+
+a {
+  color: var(--green-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--green-light);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+section {
+  padding: 2rem 0;
+}
