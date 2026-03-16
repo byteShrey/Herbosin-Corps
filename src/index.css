@@ -44,15 +44,17 @@ a:hover {
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+  max-width: 100%;
+  margin: 0;
+  padding: 0 2rem;
 }
 
 section {
   padding: 2rem 0;
+  font-size: 1.4rem; 
 }
 
 section p {
   text-align: justify;
+  font-size: 1.4rem;
 }

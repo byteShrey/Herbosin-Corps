@@ -1,0 +1,140 @@
+// Product metadata for the Products page.
+// Images are served from public/Assets/Products/...
+
+const withName = (filename) => {
+  const base = filename.replace(/\.[^/.]+$/, '')
+  return base
+    .replace(/[_-]+/g, ' ')
+    .replace(/\b\w/g, (c) => c.toUpperCase())
+}
+
+const mapFiles = (folder, files) =>
+  files.map((file) => ({
+    id: `${folder}-${file}`,
+    name: withName(file),
+    imageSrc: `/Assets/Products/${folder}/${file}`,
+    description:
+      'Detailed information about this product will be added here. It is used in various applications where quality and consistency of botanical ingredients are important.',
+  }))
+
+export const essentialOils = mapFiles('Essential Oil', [
+  'AGARWOOD-OUD-OIL..jpg',
+  'Ajowain-Oils.png',
+  'Ajwain_Oil.jpg',
+  'ALLSPICE-PIMENTO-BERRY-OIL..jpg',
+  'Almond-Oil-Sweet.jpg',
+  'Almond-Oils.jpg',
+  'Almond_Oil.webp',
+  'Aloe-vera-Gel.jpg',
+  'AMBRETTE-SEED-OIL..jpg',
+  'Amla_Oil.webp',
+  'AMYRIS-OIL..jpg',
+  'Anethi-Oil.jpg',
+  'ANGELICA-ROOT-OIL..jpg',
+  'ANISE-OIL..jpg',
+  'Anise_Oil.png',
+  'Apricot-Oil.jpg',
+  'Arnica-Oils.jpg',
+  'AUSTRALIAN-SANDALWOOD-OIL..jpg',
+  'Avacado_Oil.jpg',
+  'BALSAM-FIR-OIL..jpg',
+  'Basil-Oil.jpg',
+  'Basil_Oil.webp',
+  'BAY-LAUREL-LAUREL-LEAF-OIL..jpg',
+  'Bay-Oils.jpg',
+  'bergamoth_Oil.jpg',
+  'BETEL-LEAF-OIL..jpg',
+  'BLACK-PEPPER-OIL..jpg',
+  'CALAMUS-OIL..jpg',
+  'CAMPHOR-OIL..jpg',
+  'Cananga Oil.jpg',
+  'CARAWAY-OIL..jpg',
+  'Cardamon_Oil_Green.jpg',
+  'Carrot_Seed_Oil.jpeg',
+  'CASSIA-OIL..jpg',
+  'Cedarwood_Oil.jpg',
+  'Chamomile-Oil.jpg',
+  'Cinnamon-Oil.jpg',
+  'Eucalyptus-Oil.jpg',
+  'Fennel-Seed-Oil.jpg',
+  'Flax-Seed-Oil.jpg',
+  'Jojoba-oil.jpg',
+  'Kumkumadi_Oil.webp',
+  'Lavender_Oil.webp',
+  'Neem-Oils.jpg',
+  'Onion-Oil.jpg',
+  'saffron-oil.jpg',
+  'Tea-tree-oil.jpg',
+  'Wheat-Germ-Oil.jpg',
+  'Wintergreen-oil.jpg',
+  'Ylang-Ylang-Oil.jpg',
+])
+
+export const herbalExtracts = mapFiles('Herbal Extracts', [
+  'Amla.jpg',
+  'Arjuna.jpg',
+  'Ashoka.jpg',
+  'Ashwagandha.jpeg',
+  'Babool.jpg',
+  'Bhringraj.jpg',
+  'Bhumi_Amla.jpeg',
+  'Brahmi.jpg',
+  'Caralluma.webp',
+  'Dharuhaldi.jpg',
+  'Garcinia.webp',
+  'Ghrit_kumari.jpeg',
+  'Giloy.jpeg',
+  'Gokhru.jpg',
+  'Guggal.jpg',
+  'Gymnema.webp',
+  'Haldi.jpeg',
+  'Haritaki.jpg',
+  'Kalmegha.webp',
+  'Karela.jpg',
+  'Kasani.jpg',
+  'Kaunch.jpg',
+  'Majistha.webp',
+  'Mandook_Parni.webp',
+  'Methi.jpeg',
+  'Moringa.jpg',
+  'Mulethi.jpeg',
+  'Neem.jpg',
+  'Nirgundi.webp',
+  'Noni.jpg',
+  'Pashanved.jpg',
+  'RETHA.jpg',
+  'Safed Musali.webp',
+  'Salai_Guggal.webp',
+  'Sarpunkha.webp',
+  'Shatavari.webp',
+  'Shilajit.webp',
+  'Sikakai.jpg',
+  'Tulsi.webp',
+  'Varuna_Chaal.webp',
+  'Vasaka.webp',
+  'Vijaysaar.jpeg',
+])
+
+export const naturalFoodColors = mapFiles('Natural Food Color', [
+  'Annatto.webp',
+  'Anthocyanin_Colour.webp',
+  'beetroot.jpeg',
+  'Beta_carotene.jpeg',
+  'Caramel.webp',
+  'Carmine.webp',
+  'Chlorophyll.webp',
+  'Cucumium.jpg',
+  'Pepperica.jpg',
+  'Rubra_red.webp',
+  'Spirulina.webp',
+])
+
+export const phytochemicals = mapFiles('Phytochemicals', [
+  'Centella_Asiatica_Extract.jpeg',
+  'Colchicine.jpeg',
+  'Curcumin.jpeg',
+  'Nicotine.jpeg',
+  'Thiocolchicoside.jpeg',
+  'Vinpocetine.jpeg',
+])
+
