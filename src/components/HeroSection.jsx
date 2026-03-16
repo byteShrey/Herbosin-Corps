@@ -25,12 +25,10 @@ export default function HeroSection() {
       <section className="hero-below">
         <div className="container">
           <p className="hero-placeholder">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-            deserunt mollit anim id est laborum.
+          At Herbosin Corps, we specialize in the sourcing, processing, and supply of high-quality herbal raw materials and essential oils. With a deep commitment to purity, sustainability, and innovation, we provide natural ingredients that support industries such as nutraceuticals, cosmetics, pharmaceuticals, aromatherapy, and wellness products. 
+Our mission is to bridge the gap between nature and modern industry by delivering premium botanical ingredients sourced from trusted growers and processed under strict quality standards. Every product we offer reflects our dedication to authenticity, consistency, and global quality benchmarks. 
+
+With a focus on long-term partnerships, Herbosin Corp works closely with businesses around the world to supply reliable, natural solutions that help brands create safe, effective, and sustainable products. 
           </p>
         </div>
       </section>
