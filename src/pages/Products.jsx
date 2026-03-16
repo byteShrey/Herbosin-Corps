@@ -39,6 +39,7 @@ export default function Products() {
   const [selectedCategoryId, setSelectedCategoryId] = useState('essentialOils')
   const [selectedProduct, setSelectedProduct] = useState(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [searchTerm, setSearchTerm] = useState('')
 
   const currentCategory = useMemo(
     () => categories.find((c) => c.id === selectedCategoryId),
@@ -46,6 +47,9 @@ export default function Products() {
   )
 
   const currentProducts = categoryDataMap[selectedCategoryId] || []
+  const filteredProducts = currentProducts.filter((product) =>
+    product.name.toLowerCase().includes(searchTerm.trim().toLowerCase()),
+  )
 
   const handleProductClick = (product) => {
     setSelectedProduct(product)
@@ -94,9 +98,21 @@ export default function Products() {
         </div>
       </section>
 
+      <section className="products-search-section">
+        <div className="products-container">
+          <input
+            type="text"
+            className="products-search-input"
+            placeholder="Search products by name..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+        </div>
+      </section>
+
       <ProductGrid
         title={currentCategory?.title || ''}
-        products={currentProducts}
+        products={filteredProducts}
         onProductClick={handleProductClick}
       />
 
