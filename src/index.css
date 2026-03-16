@@ -1,6 +1,6 @@
 /* Green gradient + white theme - CSS variables (darker green) */
 :root {
-  --green-primary: #0b5b35;    /* darker, richer main green */
+   --green-primary: #0b5b35;    /* darker, richer main green */
   --green-light:   #16a34a;    /* brighter accent/hover green */
   --green-pale:    #6ee7b7;    /* light mint for highlights */
   --green-bg:      #bbf7d0;    /* section/background green */
@@ -51,4 +51,8 @@ a:hover {
 
 section {
   padding: 2rem 0;
+}
+
+section p {
+  text-align: justify;
 }
