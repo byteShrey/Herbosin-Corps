@@ -4,6 +4,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import Products from './pages/Products'
 import About from './pages/About'
+import Network from './pages/Network'
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<Products />} />
-          <Route path="/network" element={<PlaceholderPage title="Network" />} />
+          <Route path="/network" element={<Network />} />
           <Route path="/enquiry" element={<PlaceholderPage title="Enquiry" />} />
         </Routes>
       </main>
