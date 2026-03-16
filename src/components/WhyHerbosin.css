@@ -3,6 +3,12 @@
   background: transparent;
 }
 
+.why-herbosin .container {
+  max-width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .why-title {
   color: var(--green-primary);
   font-size: 1.75rem;
@@ -46,5 +52,6 @@
 
 .why-block p {
   color: var(--text-dark);
-  max-width: 800px;
+  max-width: none;
+  width: 100%;
 }

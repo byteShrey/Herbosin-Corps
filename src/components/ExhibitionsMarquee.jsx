@@ -8,18 +8,20 @@ const exhibitions = [
   { name: 'Supply Side West 2026', place: 'Las Vegas, NV (USA)', date: 'November 5-9, 2026' },
 ]
 
-function ExhibitionItem({ name, place, date }) {
+function ExhibitionBlock({ name, place, date }) {
   return (
-    <span className="marquee-item">
-      <strong>{name}</strong> — {place} — {date}
-    </span>
+    <div className="exhibition-block">
+      <div className="exhibition-block-line exhibition-block-name">{name}</div>
+      <div className="exhibition-block-line exhibition-block-place">{place}</div>
+      <div className="exhibition-block-line exhibition-block-date">{date}</div>
+    </div>
   )
 }
 
 export default function ExhibitionsMarquee() {
-  const row = exhibitions.map((e, i) => <ExhibitionItem key={i} {...e} />)
+  const row = exhibitions.map((e, i) => <ExhibitionBlock key={i} {...e} />)
   return (
-    <section className="exhibitions gradient-bg-reverse">
+    <section className="exhibitions">
       <div className="container">
         <h2 className="exhibitions-title">Exhibitions</h2>
       </div>

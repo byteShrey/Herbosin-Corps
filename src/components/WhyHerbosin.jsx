@@ -10,7 +10,7 @@ export default function WhyHerbosin() {
   ]
 
   return (
-    <section className="why-herbosin gradient-bg">
+    <section className="why-herbosin">
       <div className="container">
         <h2 className="why-title">Why Herbosin</h2>
         <ul className="why-list">

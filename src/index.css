@@ -21,7 +21,7 @@ html {
 }
 
 body {
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
   color: var(--text-dark);
   background: linear-gradient(180deg, var(--white) 0%, var(--green-bg-subtle) 50%, var(--white) 100%);
   background-attachment: fixed;
