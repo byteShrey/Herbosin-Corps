@@ -6,7 +6,7 @@ export default function YearsBanner() {
       <div className="container">
         <div className="years-banner-inner">
           <img
-            src="/Assets/Home/Gemini_Generated_Image_sbswytsbswytsbsw.png"
+            src="/Assets/Home/Banner.png"
             alt="Celebrating 19 years in business since 2007"
             className="years-banner-img"
           />

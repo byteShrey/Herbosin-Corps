@@ -52,7 +52,7 @@ export default function ForthcomingProducts() {
               <p>
                 Designed for modern farming practices, these fertilizers help enhance soil fertility while maintaining
                 environmental sustainability. By focusing on natural ingredients and responsible production methods,
-                Herbosin Corp aims to provide farmers and agricultural industries with reliable solutions that contribute
+                Herbosin Corps aims to provide farmers and agricultural industries with reliable solutions that contribute
                 to healthier crops and long-term soil productivity.
               </p>
             </div>
@@ -72,7 +72,7 @@ export default function ForthcomingProducts() {
             <div className="forthcoming-product-text">
               <h3 className="forthcoming-product-title">Liquid Fertilizers</h3>
               <p>
-                As part of our commitment to innovation in agriculture, Herbosin Corp is introducing a range of liquid
+                As part of our commitment to innovation in agriculture, Herbosin Corps is introducing a range of liquid
                 fertilizers designed to deliver essential nutrients to plants efficiently and effectively. Liquid
                 fertilizers provide fast absorption and uniform distribution, allowing crops to receive nutrients quickly
                 and improve growth performance.

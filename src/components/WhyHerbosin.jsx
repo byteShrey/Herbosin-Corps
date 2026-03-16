@@ -33,7 +33,7 @@ export default function WhyHerbosin() {
 
             Strong partnerships with global clients
 
-            Through this network, Herbosin Corp connects nature’s resources with global markets. 
+            Through this network, Herbosin Corps connects nature’s resources with global markets. 
           </p>
         </div>
         <div className="why-block">

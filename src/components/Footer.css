@@ -66,7 +66,14 @@
   color: var(--text-dark);
   white-space: nowrap;
 }
-
+.footer-bottom {
+  margin-top: 0.5rem;
+  text-align: left;   /* this right-aligns the copyright text */
+  padding-right: 4px;
+  padding-left: 20px;  /* optional: nudges it 3–4px to the right */
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
 @media (max-width: 900px) {
   .footer-inner {
     flex-direction: column;
@@ -84,10 +91,9 @@
     text-align: center;
     max-width: 360px;
   }
+
   .footer-bottom {
-    margin-top: 0.5rem;
     text-align: center;
-    font-size: 0.8rem;
-    color: var(--text-muted);
+    padding-right: 0;
   }
 }
