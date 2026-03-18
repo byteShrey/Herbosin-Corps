@@ -1,23 +1,27 @@
+import { Suspense, lazy } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import Products from './pages/Products'
 import About from './pages/About'
-import Network from './pages/Network'
+
+const Network = lazy(() => import('./pages/Network'))
 
 function App() {
   return (
     <>
       <Navbar />
       <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/network" element={<Network />} />
-          <Route path="/enquiry" element={<PlaceholderPage title="Enquiry" />} />
-        </Routes>
+        <Suspense fallback={<PlaceholderPage title="Loading..." />}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/network" element={<Network />} />
+            <Route path="/enquiry" element={<PlaceholderPage title="Enquiry" />} />
+          </Routes>
+        </Suspense>
       </main>
       <Footer />
     </>
