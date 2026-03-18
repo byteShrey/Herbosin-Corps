@@ -7,7 +7,7 @@ const navLinks = [
   { path: '/about', label: 'About Us' },
   { path: '/products', label: 'Products' },
   { path: '/network', label: 'Network' },
-  { path: '/enquiry', label: 'Enquiry' },
+  { path: '/enquiry', label: 'Contact US' },
 ]
 
 export default function Navbar() {
