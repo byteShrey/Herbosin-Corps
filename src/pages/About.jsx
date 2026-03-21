@@ -21,7 +21,7 @@ export default function About() {
       {/* Hero image */}
       <section id="about-top" className="about-hero">
         <img
-          src="/Assets/About us/Desk.jpeg"
+          src="/Assets/About us/New desk.jpeg"
           alt="Herbosin Corps office reception"
           className="about-hero-image"
         />
@@ -191,7 +191,7 @@ export default function About() {
               and people.
             </p>
             <div className="quality-card-footer">
-              <span>01-01-2001</span>
+              <span>01-01-2009</span>
               <span>Director</span>
             </div>
           </div>

@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  min-height: 85vh;
+  min-height: clamp(220px, 50vh, 500px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,5 +54,5 @@
   max-width: 100%;
   margin: 0;
   color: var(--text-dark);
-  font-size: 1.4rem;
+  
 }
