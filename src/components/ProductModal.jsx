@@ -1,6 +1,6 @@
 import './ProductsPage.css'
 
-export default function ProductModal({ product, isOpen, onClose }) {
+export default function ProductModal({ product, isOpen, onClose, onEnquire }) {
   if (!isOpen || !product) return null
 
   const descriptionLines = (product.description || '')
@@ -22,6 +22,11 @@ export default function ProductModal({ product, isOpen, onClose }) {
 
   const handleBackdropClick = (e) => {
     if (e.target.dataset.backdrop === 'true') onClose()
+  }
+
+  const handleEnquireClick = () => {
+    if (!onEnquire || !product) return
+    onEnquire(product)
   }
 
   return (
@@ -52,6 +57,9 @@ export default function ProductModal({ product, isOpen, onClose }) {
                 ))}
               </ul>
             )}
+            <button type="button" className="product-modal-enquire-btn" onClick={handleEnquireClick}>
+              Enquire Now
+            </button>
           </div>
         </div>
       </div>

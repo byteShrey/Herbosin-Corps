@@ -1,9 +1,14 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
+import emailjs from '@emailjs/browser'
 import ProductCategoryCard from '../components/ProductCategoryCard'
 import ProductGrid from '../components/ProductGrid'
 import ProductModal from '../components/ProductModal'
 import { essentialOils, herbalExtracts, naturalFoodColors, phytochemicals } from '../data/products'
 import '../components/ProductsPage.css'
+
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_p5gqd2k'
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_089ekqj'
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'TFDXmudtY27dzTDFu'
 
 const categories = [
   {
@@ -40,6 +45,17 @@ export default function Products() {
   const [selectedProduct, setSelectedProduct] = useState(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [searchTerm, setSearchTerm] = useState('')
+  const [isEnquiryOpen, setIsEnquiryOpen] = useState(false)
+  const [enquiryProduct, setEnquiryProduct] = useState(null)
+  const [isSendingEnquiry, setIsSendingEnquiry] = useState(false)
+  const [enquiryStatus, setEnquiryStatus] = useState({ type: '', text: '' })
+  const [enquiryForm, setEnquiryForm] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: '',
+  })
 
   const currentCategory = useMemo(
     () => categories.find((c) => c.id === selectedCategoryId),
@@ -59,6 +75,74 @@ export default function Products() {
   const handleCloseModal = () => {
     setIsModalOpen(false)
     setSelectedProduct(null)
+  }
+
+  useEffect(() => {
+    if (!enquiryProduct) return
+    setEnquiryForm((prev) => ({
+      ...prev,
+      subject: enquiryProduct.name,
+      message: `Hi, I'm interested in ${enquiryProduct.name}. Please share details.`,
+    }))
+  }, [enquiryProduct])
+
+  const handleEnquireNow = (product) => {
+    handleCloseModal()
+    setEnquiryProduct(product)
+    setEnquiryStatus({ type: '', text: '' })
+    setIsEnquiryOpen(true)
+  }
+
+  const handleCloseEnquiry = () => {
+    setIsEnquiryOpen(false)
+    setEnquiryProduct(null)
+    setEnquiryStatus({ type: '', text: '' })
+  }
+
+  const handleEnquiryChange = (e) => {
+    const { name, value } = e.target
+    setEnquiryForm((prev) => ({ ...prev, [name]: value }))
+  }
+
+  const handleEnquirySubmit = async (e) => {
+    e.preventDefault()
+    setEnquiryStatus({ type: '', text: '' })
+
+    const canSubmit =
+      enquiryForm.name.trim() &&
+      enquiryForm.email.trim() &&
+      enquiryForm.subject.trim() &&
+      enquiryForm.message.trim()
+
+    if (!canSubmit) {
+      setEnquiryStatus({ type: 'error', text: 'Please fill all required fields before submitting.' })
+      return
+    }
+
+    try {
+      setIsSendingEnquiry(true)
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: enquiryForm.name.trim(),
+          from_email: enquiryForm.email.trim(),
+          phone: enquiryForm.phone.trim() || 'N/A',
+          subject: enquiryForm.subject.trim(),
+          message: enquiryForm.message.trim(),
+          to_email: 'hed@herbosin.com',
+          submitted_at: new Date().toLocaleString(),
+        },
+        EMAILJS_PUBLIC_KEY,
+      )
+
+      setEnquiryStatus({ type: 'success', text: 'Your enquiry has been sent successfully.' })
+      setEnquiryForm((prev) => ({ ...prev, name: '', email: '', phone: '' }))
+    } catch {
+      setEnquiryStatus({ type: 'error', text: 'Unable to send enquiry right now. Please try again shortly.' })
+    } finally {
+      setIsSendingEnquiry(false)
+    }
   }
 
   return (
@@ -153,7 +237,96 @@ export default function Products() {
         </div>
       </section>
 
-      <ProductModal product={selectedProduct} isOpen={isModalOpen} onClose={handleCloseModal} />
+      <ProductModal
+        product={selectedProduct}
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        onEnquire={handleEnquireNow}
+      />
+
+      {isEnquiryOpen && (
+        <div className="product-enquiry-backdrop" onClick={handleCloseEnquiry} role="presentation">
+          <div className="product-enquiry-modal" role="dialog" aria-modal="true" onClick={(e) => e.stopPropagation()}>
+            <button
+              type="button"
+              className="product-enquiry-close"
+              onClick={handleCloseEnquiry}
+              aria-label="Close enquiry form"
+            >
+              ×
+            </button>
+            <h3 className="product-enquiry-title">Enquire Now</h3>
+            {enquiryProduct?.name && <p className="product-enquiry-product">Product: {enquiryProduct.name}</p>}
+
+            <form className="product-enquiry-form" onSubmit={handleEnquirySubmit}>
+              <label>
+                Name <span>*</span>
+                <input
+                  type="text"
+                  name="name"
+                  value={enquiryForm.name}
+                  onChange={handleEnquiryChange}
+                  placeholder="Enter your name"
+                  required
+                />
+              </label>
+              <label>
+                Email <span>*</span>
+                <input
+                  type="email"
+                  name="email"
+                  value={enquiryForm.email}
+                  onChange={handleEnquiryChange}
+                  placeholder="Enter your email"
+                  required
+                />
+              </label>
+              <label>
+                Phone Number <small>(optional)</small>
+                <input
+                  type="tel"
+                  name="phone"
+                  value={enquiryForm.phone}
+                  onChange={handleEnquiryChange}
+                  placeholder="Enter your phone number"
+                />
+              </label>
+              <label>
+                Subject <span>*</span>
+                <input
+                  type="text"
+                  name="subject"
+                  value={enquiryForm.subject}
+                  onChange={handleEnquiryChange}
+                  required
+                />
+              </label>
+              <label>
+                Message <span>*</span>
+                <textarea
+                  name="message"
+                  value={enquiryForm.message}
+                  onChange={handleEnquiryChange}
+                  rows={4}
+                  required
+                />
+              </label>
+              <button type="submit" disabled={isSendingEnquiry}>
+                {isSendingEnquiry ? 'Sending...' : 'Submit Enquiry'}
+              </button>
+              {enquiryStatus.text && (
+                <p
+                  className={`product-enquiry-status ${
+                    enquiryStatus.type === 'success' ? 'product-enquiry-success' : 'product-enquiry-error'
+                  }`}
+                >
+                  {enquiryStatus.text}
+                </p>
+              )}
+            </form>
+          </div>
+        </div>
+      )}
     </>
   )
 }

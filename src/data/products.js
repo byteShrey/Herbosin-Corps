@@ -1,5 +1,4 @@
-// Product metadata for the Products page.
-// Images are served from public/Assets/Products/...
+
 
 const withName = (filename) => {
   const base = filename.replace(/\.[^/.]+$/, '')
@@ -831,6 +830,258 @@ Garcinia cambogia | Standardized: 50% - 70% Hydroxycitric Acid (HCA)
 
 • Garcinia dry extract, standardized to 50% - 70% Hydroxycitric Acid (HCA), is one of the most widely researched natural weight management ingredients, known for its ability to inhibit fat synthesis and suppress appetite.
 • Extensively used in weight loss supplements and metabolic health products, it supports healthy lipid profiles, reduces emotional eating, and promotes fat-burning by blocking the citrate lyase enzyme.
+        `.trim(),
+      }
+    case 'Herbal Extracts-Karela.jpg':
+      return {
+        ...item,
+        name: 'KARELA (Momordica Charantia) Dry Extract',
+        description: `
+KARELA (Momordica Charantia) Dry Extract
+Momordica charantia | Standardized: 3% - 10%
+
+• Widely used for blood sugar management and diabetes support.
+• Known for its bitter compounds that aid digestion and liver health.
+        `.trim(),
+      }
+    case 'Herbal Extracts-Kalmegha.webp':
+      return {
+        ...item,
+        name: 'KALMEGH (Andrographis Paniculata) Dry Extract',
+        description: `
+KALMEGH (Andrographis Paniculata) Dry Extract
+Andrographis paniculata | Standardized: 5% - 30%
+
+• Potent herb used for immune boosting and fighting infections.
+• Effective in managing fever, liver disorders, and inflammation.
+        `.trim(),
+      }
+    case 'Herbal Extracts-Arjuna.jpg':
+      return {
+        ...item,
+        name: 'ARJUNA (Terminalia Arjuna) Dry Extract',
+        description: `
+ARJUNA (Terminalia Arjuna) Dry Extract
+Terminalia arjuna | Standardized: 10% - 25%
+
+• Traditionally used as a cardiac tonic to support heart health.
+• Helps in managing cholesterol levels and blood pressure.
+        `.trim(),
+      }
+    case 'Herbal Extracts-Haritaki.jpg':
+      return {
+        ...item,
+        name: 'HARITAKI (Terminalia Chebula) Dry Extract',
+        description: `
+HARITAKI (Terminalia Chebula) Dry Extract
+Terminalia chebula | Standardized: 25% - 50%
+
+• One of the most revered Ayurvedic herbs for digestive wellness.
+• Rich in antioxidants, supports detoxification and immunity.
+        `.trim(),
+      }
+    case 'Herbal Extracts-Babool.jpg':
+      return {
+        ...item,
+        name: 'BABOOL (Acacia Nilotica) Dry Extract',
+        description: `
+BABOOL (Acacia Nilotica) Dry Extract
+Acacia nilotica | Standardized: 20% - 45%
+
+• Commonly used for oral health, gum care, and anti-bacterial properties.
+• Supports wound healing and has astringent properties.
+        `.trim(),
+      }
+    case 'Herbal Extracts-Kasani.jpg':
+      return {
+        ...item,
+        name: 'KASANI (Cichorium Intybus) Dry Extract',
+        description: `
+KASANI (Cichorium Intybus) Dry Extract
+Cichorium intybus | Standardized: 3% - 5%
+
+• Used as a liver tonic and to treat jaundice and bile disorders.
+• Acts as a natural diuretic and supports kidney function.
+        `.trim(),
+      }
+    case 'Herbal Extracts-Sarpunkha.webp':
+      return {
+        ...item,
+        name: 'SARPUNKHA (Tephrosia Purpurea) Dry Extract',
+        description: `
+SARPUNKHA (Tephrosia Purpurea) Dry Extract
+Tephrosia purpurea | Standardized: 10% - 20%
+
+• Traditionally used for liver and spleen disorders in Ayurveda.
+• Supports blood purification and has anti-inflammatory properties.
+        `.trim(),
+      }
+    case 'Herbal Extracts-Vijaysaar.jpeg':
+      return {
+        ...item,
+        name: 'VIJAYSAAR (Pterocarpus Marsupium) Dry Extract',
+        description: `
+VIJAYSAAR (Pterocarpus Marsupium) Dry Extract
+Pterocarpus marsupium | Standardized: 5% - 20%
+
+• Highly effective in managing type-2 diabetes and blood sugar levels.
+• Known for its anti-obesity and lipid-lowering benefits.
+        `.trim(),
+      }
+    case 'Herbal Extracts-Mandook_Parni.webp':
+      return {
+        ...item,
+        name: 'MANDOOK PARNI (Centella Asiatica) Dry Extract',
+        description: `
+MANDOOK PARNI (Centella Asiatica) Dry Extract
+Centella asiatica | Standardized: 20% - 40%
+
+• Widely used for brain health, memory, and cognitive enhancement.
+• Promotes wound healing and skin regeneration.
+        `.trim(),
+      }
+    case 'Herbal Extracts-Brahmi.jpg':
+      return {
+        ...item,
+        name: 'BRAHMI (Bacopa Monnieri) Dry Extract',
+        description: `
+BRAHMI (Bacopa Monnieri) Dry Extract
+Bacopa monnieri | Standardized: 20% - 40%
+
+• A classic Ayurvedic nootropic for memory and mental clarity.
+• Helps reduce anxiety, stress, and supports nervous system health.
+        `.trim(),
+      }
+    case 'Herbal Extracts-Vasaka.webp':
+      return {
+        ...item,
+        name: 'VASAKA (Adhatoda Vasica) Dry Extract',
+        description: `
+VASAKA (Adhatoda Vasica) Dry Extract
+Adhatoda vasica | Standardized: 1% - 2%
+
+• Primarily used for respiratory conditions like asthma and bronchitis.
+• Acts as a natural expectorant and anti-spasmodic agent.
+        `.trim(),
+      }
+    case 'Herbal Extracts-Shatavari.webp':
+      return {
+        ...item,
+        name: 'SATWARI (Asparagus Racemosus) Dry Extract',
+        description: `
+SATWARI (Asparagus Racemosus) Dry Extract
+Asparagus racemosus | Standardized: 20% - 40%
+
+• A key adaptogen used for female reproductive health and hormonal balance.
+• Supports lactation, immunity, and overall vitality.
+        `.trim(),
+      }
+    case 'Herbal Extracts-Varuna_Chaal.webp':
+      return {
+        ...item,
+        name: 'VARUNA CHAAL (Crataeva Nurvala) Dry Extract',
+        description: `
+VARUNA CHAAL (Crataeva Nurvala) Dry Extract
+Crataeva nurvala | Standardized: 15% - 25%
+
+• Used extensively for urinary tract health and kidney stone management.
+• Has anti-inflammatory and diuretic properties.
+        `.trim(),
+      }
+    case 'Herbal Extracts-Pashanved.jpg':
+      return {
+        ...item,
+        name: 'PASHANVED (Bergenia Ligulata) Dry Extract',
+        description: `
+PASHANVED (Bergenia Ligulata) Dry Extract
+Bergenia ligulata | Standardized: 10% - 20%
+
+• Commonly used for dissolving kidney and urinary stones.
+• Supports urinary health and has antimicrobial properties.
+        `.trim(),
+      }
+    case 'Herbal Extracts-Safed Musali.webp':
+      return {
+        ...item,
+        name: 'SAFED MUSALI (Chlorophytum Borivilianum) Dry Extract',
+        description: `
+SAFED MUSALI (Chlorophytum Borivilianum) Dry Extract
+Chlorophytum borivilianum | Standardized: 20% - 40%
+
+• A powerful adaptogen used as a natural aphrodisiac and vitality booster.
+• Supports male reproductive health and physical stamina.
+        `.trim(),
+      }
+    case 'Herbal Extracts-Salai_Guggal.webp':
+      return {
+        ...item,
+        name: 'SALAI GUGGAL (Boswellia Serrata) Dry Extract',
+        description: `
+SALAI GUGGAL (Boswellia Serrata) Dry Extract
+Boswellia serrata | Standardized: 50% - 85%
+
+• Widely used for joint health, arthritis, and inflammation relief.
+• Active boswellic acids support cartilage and bone health.
+        `.trim(),
+      }
+    case 'Herbal Extracts-Moringa.jpg':
+      return {
+        ...item,
+        name: 'MORINGA (Moringa Oleifera) Dry Extract',
+        description: `
+MORINGA (Moringa Oleifera) Dry Extract
+Moringa oleifera | Standardized: 15% - 25%
+
+• Extremely nutrient-dense; rich in vitamins, minerals, and amino acids.
+• Supports energy, immunity, and overall nutritional supplementation.
+        `.trim(),
+      }
+    case 'Herbal Extracts-Noni.jpg':
+      return {
+        ...item,
+        name: 'NONI (Morinda Citrifolia) Dry Extract',
+        description: `
+NONI (Morinda Citrifolia) Dry Extract
+Morinda citrifolia | Standardized: 15% - 40%
+
+• Used for immune support, antioxidant activity, and anti-aging benefits.
+• Helps in managing inflammation and supporting cellular health.
+        `.trim(),
+      }
+    case 'Herbal Extracts-Dharuhaldi.jpg':
+      return {
+        ...item,
+        name: 'DARUHALDI (Berberis Aristata) Dry Extract',
+        description: `
+DARUHALDI (Berberis Aristata) Dry Extract
+Berberis aristata | Standardized: 5% - 10%
+
+• Rich in berberine; used for blood sugar control and liver support.
+• Has strong antimicrobial, anti-inflammatory, and digestive properties.
+        `.trim(),
+      }
+    case 'Herbal Extracts-Guggal.jpg':
+      return {
+        ...item,
+        name: 'GUGGAL (Commiphora Mukul) Dry Extract',
+        description: `
+GUGGAL (Commiphora Mukul) Dry Extract
+Commiphora mukul | Standardized: 1.5% - 5%
+
+• A classical Ayurvedic resin used for cholesterol and weight management.
+• Supports thyroid function and has potent anti-inflammatory effects.
+        `.trim(),
+      }
+    case 'Herbal Extracts-Caralluma.webp':
+      return {
+        ...item,
+        name: 'CARALLUMA (Caralluma Fimbriata) Dry Extract',
+        description: `
+CARALLUMA (Caralluma Fimbriata) Dry Extract
+Caralluma fimbriata | Standardized: 20% - 40%
+
+• Used as a natural appetite suppressant for weight management.
+• Supports endurance, reduces fatigue, and helps control hunger pangs.
         `.trim(),
       }
     default:

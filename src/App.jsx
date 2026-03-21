@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import Products from './pages/Products'
 import About from './pages/About'
+import Enquiry from './pages/Enquiry'
 
 const Network = lazy(() => import('./pages/Network'))
 
@@ -19,7 +20,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/products" element={<Products />} />
             <Route path="/network" element={<Network />} />
-            <Route path="/enquiry" element={<PlaceholderPage title="Enquiry" />} />
+            <Route path="/enquiry" element={<Enquiry />} />
           </Routes>
         </Suspense>
       </main>

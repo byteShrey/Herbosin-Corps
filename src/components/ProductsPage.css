@@ -237,6 +237,139 @@
   margin-bottom: 0.35rem;
 }
 
+.product-modal-enquire-btn {
+  margin-top: 0.9rem;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #0b5b35 0%, #0d7d49 100%);
+  color: #ffffff;
+  padding: 0.62rem 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+  box-shadow: 0 6px 14px rgba(11, 91, 53, 0.2);
+}
+
+.product-modal-enquire-btn:hover {
+  transform: translateY(-1px);
+}
+
+.product-enquiry-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 130;
+}
+
+.product-enquiry-modal {
+  width: min(620px, 92vw);
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid rgba(11, 91, 53, 0.15);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+  padding: 1.15rem 1.25rem 1.2rem;
+  position: relative;
+}
+
+.product-enquiry-close {
+  position: absolute;
+  right: 0.7rem;
+  top: 0.45rem;
+  border: none;
+  background: transparent;
+  font-size: 1.45rem;
+  color: #52626b;
+  cursor: pointer;
+}
+
+.product-enquiry-title {
+  margin: 0;
+  color: var(--green-primary);
+  font-size: 1.35rem;
+}
+
+.product-enquiry-product {
+  margin: 0.25rem 0 0.85rem;
+  color: #203239;
+  font-size: 0.95rem;
+}
+
+.product-enquiry-form {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.product-enquiry-form label {
+  display: grid;
+  gap: 0.32rem;
+  font-weight: 700;
+  color: #203239;
+}
+
+.product-enquiry-form label span {
+  color: #cc1f1f;
+}
+
+.product-enquiry-form label small {
+  color: #5b6c76;
+  font-weight: 500;
+}
+
+.product-enquiry-form input,
+.product-enquiry-form textarea {
+  border: 1px solid rgba(11, 91, 53, 0.3);
+  border-radius: 9px;
+  padding: 0.58rem 0.78rem;
+  font: inherit;
+  outline: none;
+  background: #fbfdfc;
+}
+
+.product-enquiry-form input:focus,
+.product-enquiry-form textarea:focus {
+  border-color: var(--green-primary);
+  box-shadow: 0 0 0 3px rgba(11, 91, 53, 0.12);
+  background: #ffffff;
+}
+
+.product-enquiry-form button {
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #0b5b35 0%, #0d7d49 100%);
+  color: #ffffff;
+  padding: 0.68rem 0.95rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.product-enquiry-form button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.product-enquiry-status {
+  margin: 0.2rem 0 0;
+  padding: 0.5rem 0.65rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.product-enquiry-success {
+  background: #e8f9ef;
+  color: #126f41;
+  border: 1px solid #9ed8b7;
+}
+
+.product-enquiry-error {
+  background: #fff1f1;
+  color: #b42318;
+  border: 1px solid #f1b4b2;
+}
+
 .products-search-section {
   padding: 0 0 1.5rem;
 }
