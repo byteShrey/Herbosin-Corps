@@ -124,7 +124,8 @@
 }
 
 .enquiry-form-card {
-  max-width: 760px;
+  max-width: min(600px, 80%);
+  width: 50%;
   margin: 0 auto;
   padding: 1.15rem 1.2rem;
   position: relative;

@@ -203,9 +203,10 @@ export default function Products() {
       <section className="extraction-section">
         <div className="extraction-diagram-wrap">
           <img
-            src="/Assets/Products/Diagram.png"
-            alt="Herbal extraction process flow diagram"
+            src="/Assets/Products/TryImage.jpeg"
+            alt="Herbal extraction process flow from raw herbs to packing"
             className="extraction-diagram"
+            loading="lazy"
           />
         </div>
         <div className="products-container extraction-text">
@@ -307,7 +308,7 @@ export default function Products() {
                   name="message"
                   value={enquiryForm.message}
                   onChange={handleEnquiryChange}
-                  rows={4}
+                  rows={3}
                   required
                 />
               </label>

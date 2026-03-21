@@ -16,6 +16,15 @@ export default function About() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
+  const certificates = [
+    { src: '/Assets/About us/AdharCert.jpeg', alt: 'Udyog Aadhaar MSME registration' },
+    { src: '/Assets/About us/Fssai.jpeg', alt: 'FSSAI — Food Safety and Standards Authority of India' },
+    { src: '/Assets/About us/GMP.jpeg', alt: 'WHO Good Manufacturing Practice (GMP) certificate' },
+    { src: '/Assets/About us/Iso.jpeg', alt: 'ISO 9001:2015 Quality Management Systems certificate' },
+    { src: '/Assets/About us/SpicesBoard.jpeg', alt: 'Spices Board India' },
+    { src: '/Assets/About us/USFDA.png', alt: 'US FDA registered facility' },
+  ]
+
   return (
     <>
       {/* Hero image */}
@@ -202,23 +211,14 @@ export default function About() {
       <section className="about-section">
         <div className="about-container">
           <h2 className="about-title">Certificates</h2>
-          <div className="certificates-grid">
-            <figure className="certificate-card">
-              <img
-                src="/Assets/About us/certificate_1.jpg"
-                alt="ISO 9001:2015 quality management certificate"
-                className="certificate-image"
-              />
-              <figcaption className="certificate-caption">ISO 9001:2015 Quality Management Systems</figcaption>
-            </figure>
-            <figure className="certificate-card">
-              <img
-                src="/Assets/About us/certificate_2.jpg"
-                alt="WHO-GMP manufacturing practice certificate"
-                className="certificate-image"
-              />
-              <figcaption className="certificate-caption">WHO-GMP Manufacturing Practice Certification</figcaption>
-            </figure>
+          <div className="certificates-grid" role="list">
+            {certificates.map(({ src, alt }) => (
+              <div key={src} className="certificate-card" role="listitem">
+                <div className="certificate-image-wrap">
+                  <img src={src} alt={alt} className="certificate-image" loading="lazy" />
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
